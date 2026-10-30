@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500;800&family=Chivo:wght@400;600&display=swap");
+
+:root {
+  --steel: #2e353b;      /* parkerized gun steel */
+  --steel-deep: #232a2f;
+  --bone: #e9e4d8;
+  --bone-dim: #b9b4a7;
+  --brass: #c19a5b;
+  --olive: #6b6f45;
+  --ember: #b5492f;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--steel);
+  color: var(--bone);
+  font: 400 1.0625rem/1.65 "Chivo", system-ui, sans-serif;
+}
+img { max-width: 100%; height: auto; display: block; }
+figure { margin: 0; }
+a { color: var(--brass); text-underline-offset: 3px; }
+a:hover { color: var(--bone); }
+:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }
+
+.wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+
+/* masthead: the stencil wordmark is the one loud thing on the page */
+.mast { padding: 56px 0 28px; border-bottom: 2px solid var(--steel-deep); }
+.mark {
+  font-family: "Big Shoulders Stencil Display", sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.4rem, 13vw, 9.5rem);
+  line-height: 0.86;
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: var(--bone);
+}
+.mark span { display: block; color: var(--brass); }
+.mast p { max-width: 34rem; margin: 22px 0 0; color: var(--bone-dim); font-size: 1.15rem; }
+
+nav.top { display: flex; gap: 22px; padding: 18px 0; font-weight: 600; }
+nav.top a { color: var(--bone-dim); text-decoration: none; }
+nav.top a:hover, nav.top a[aria-current] { color: var(--bone); }
+
+section { padding: 56px 0; border-bottom: 2px solid var(--steel-deep); }
+h2 {
+  font-family: "Big Shoulders Stencil Display", sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  margin: 0 0 18px;
+  color: var(--bone);
+}
+h3 { font-size: 1.15rem; margin: 28px 0 6px; color: var(--bone); }
+p { margin: 0 0 14px; max-width: 38rem; }
+
+.game { display: grid; grid-template-columns: 1fr; gap: 28px; }
+@media (min-width: 860px) { .game { grid-template-columns: 5fr 4fr; align-items: start; } }
+.shot { border: 6px solid var(--steel-deep); background: var(--steel-deep); }
+.shot figcaption { font-size: 0.9rem; color: var(--bone-dim); padding: 8px 4px 2px; }
+.facts { list-style: none; padding: 0; margin: 18px 0 0; }
+.facts li { padding: 10px 0; border-top: 1px solid #3c444a; }
+.facts b { color: var(--brass); font-weight: 600; }
+.status { display: inline-block; margin-top: 10px; padding: 6px 12px; border: 2px solid var(--olive); color: var(--bone); font-weight: 600; }
+
+.pair { display: grid; gap: 18px; margin-top: 26px; }
+@media (min-width: 700px) { .pair { grid-template-columns: 1fr 1fr; } }
+
+footer { padding: 34px 0 48px; color: var(--bone-dim); font-size: 0.95rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: space-between; }
+
+.doc h1 { font-family: "Big Shoulders Stencil Display", sans-serif; font-weight: 800; font-size: clamp(2.6rem, 8vw, 4.5rem); line-height: 0.95; margin: 40px 0 10px; }
+.doc .updated { color: var(--bone-dim); }
+.doc ul { max-width: 38rem; padding-left: 1.2em; }
+.doc li { margin-bottom: 6px; }
